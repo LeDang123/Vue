@@ -1,17 +1,276 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-    <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title><%= htmlWebpackPlugin.options.title %></title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but <%= htmlWebpackPlugin.options.title %> doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+<!doctype html>
+<html lang="en" class="h-100">
+   <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="">
+      <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+      <meta name="generator" content="Jekyll v4.0.1">
+      <!-- Favicons -->
+      <link href="./assets/dist/images/favicon.png" rel="icon">
+      <link href="./assets/dist/images/apple-touch-icon.png" rel="apple-touch-icon">
+      <title>Landing page </title>
+      <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/sticky-footer-navbar/">
+      <!-- Bootstrap core CSS -->
+      <link href="./assets/dist/css/bootstrap.css" rel="stylesheet">
+      <link href="./assets/dist/css/bootstrap.min.css" rel="stylesheet">
+      <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/grid/">
+      <!-- Custom styles for this template -->
+      <link href="./assets/dist/css/style.css" rel="stylesheet">
+   </head>
+   <body class="d-flex flex-column h-100">
+      <header>
+         <!-- Fixed navbar -->
+         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-info text-white ">
+            <a class="navbar-brand" href="index.html"><img src="./assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top pt-1" alt="" >Brand </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse " id="navbarCollapse">
+               <ul class="navbar-nav mr-auto ">
+                  <li class="nav-item active">
+                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link" href="#">Link</a>
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                  </li>
+               </ul>
+               <form class="form-inline mt-2 mt-md-0">
+                  <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+               </form>
+            </div>
+         </nav>
+      </header>
+      <!-- ======= Carousel Section ======= Check more ==== -->
+      <img src="./assets/dist/images/la.jpg" class="img-fluid" alt="">
+      <!-- ======= END Carousel Section ======= -->
+      <!-- Begin page content -->
+      <main role="main" class="flex-shrink-0">
+         <section class="pt-5">
+            <div class="container">
+               <h1>Bootstrap grid examples</h1>
+               <p class="lead">Basic grid layouts to get you familiar with building within the Bootstrap grid system.</p>
+               <p>In these examples the <code>.themed-grid-col</code> class is added to the columns to add some theming. This is not a class that is available in Bootstrap by default.</p>
+               <h2 class="mt-4">Five grid tiers</h2>
+               <p>There are five tiers to the Bootstrap grid system, one for each range of devices we support. Each tier starts at a minimum viewport size and automatically applies to the larger devices unless overridden.</p>
+               <div class="row mb-3">
+                  <div class="col-4 themed-grid-col">.col-4</div>
+                  <div class="col-4 themed-grid-col">.col-4</div>
+                  <div class="col-4 themed-grid-col">.col-4</div>
+               </div>
+               <div class="row mb-3">
+                  <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+                  <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+                  <div class="col-sm-4 themed-grid-col">.col-sm-4</div>
+               </div>
+               <div class="row mb-3">
+                  <div class="col-md-4 themed-grid-col">.col-md-4</div>
+                  <div class="col-md-4 themed-grid-col">.col-md-4</div>
+                  <div class="col-md-4 themed-grid-col">.col-md-4</div>
+               </div>
+               <div class="row mb-3">
+                  <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+                  <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+                  <div class="col-lg-4 themed-grid-col">.col-lg-4</div>
+               </div>
+               <div class="row mb-3">
+                  <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+                  <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+                  <div class="col-xl-4 themed-grid-col">.col-xl-4</div>
+               </div>
+               <hr class="my-4">
+               <h2 class="mt-4">Two columns with two nested columns</h2>
+               <p>Per the documentation, nesting is easy—just put a row of columns within an existing column. This gives you two columns <strong>starting at desktops and scaling to large desktops</strong>, with another two (equal widths) within the larger column.</p>
+               <p>At mobile device sizes, tablets and down, these columns and their nested columns will stack.</p>
+               <div class="row mb-3">
+                  <div class="col-md-8 themed-grid-col">
+                     <div class="pb-3">
+                        .col-md-8
+                     </div>
+                     <div class="row">
+                        <div class="col-md-6 themed-grid-col">.col-md-6</div>
+                        <div class="col-md-6 themed-grid-col">.col-md-6</div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 themed-grid-col">.col-md-4</div>
+               </div>
+            </div>
+         </section>
+         <!--Begin Table-->
+         <section class="bg-info">
+            <div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
+               <h1 class="display-4">Table</h1>
+               <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+            </div>
+            <div class="container">
+               <table class="table">
+                  <thead>
+                     <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">First</th>
+                        <th scope="col">Last</th>
+                        <th scope="col">Handle</th>
+                     </tr>
+                  </thead>
+                  <tbody>
+                     <tr>
+                        <th scope="row">1</th>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                        <td>@mdo</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">2</th>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                        <td>@fat</td>
+                     </tr>
+                     <tr>
+                        <th scope="row">3</th>
+                        <td>Larry</td>
+                        <td>the Bird</td>
+                        <td>@twitter</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </section>
+         <!--End Table -->
+
+         <!--Pricing-->
+
+         <section class="bg-light">
+         <div class="pricing-header px-1 py-1 pt-md-1 pb-md-4 mx-auto text-center bg-light">
+            <h1 class="display-4">Pricing</h1>
+            <p class="lead">Quickly build an effective pricing table for your potential customers with this Bootstrap example. It’s built with default Bootstrap components and utilities with little customization.</p>
+         </div>
+         <div class="container bg-light">
+         <div class="card-deck mb-3 text-center">
+            <div class="card mb-4 shadow-sm">
+               <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Free</h4>
+               </div>
+               <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$0 <small class="text-muted">/ mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                     <li>10 users included</li>
+                     <li>2 GB of storage</li>
+                     <li>Email support</li>
+                     <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+               </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+               <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Pro</h4>
+               </div>
+               <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$15 <small class="text-muted">/ mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                     <li>20 users included</li>
+                     <li>10 GB of storage</li>
+                     <li>Priority email support</li>
+                     <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+               </div>
+            </div>
+            <div class="card mb-4 shadow-sm">
+               <div class="card-header">
+                  <h4 class="my-0 font-weight-normal">Enterprise</h4>
+               </div>
+               <div class="card-body">
+                  <h1 class="card-title pricing-card-title">$29 <small class="text-muted">/ mo</small></h1>
+                  <ul class="list-unstyled mt-3 mb-4">
+                     <li>30 users included</li>
+                     <li>15 GB of storage</li>
+                     <li>Phone and email support</li>
+                     <li>Help center access</li>
+                  </ul>
+                  <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+               </div>
+            </div>
+         </div>
+         </section>
+         <!--End Pricing-->
+
+      
+         <!-- ======= Contact Section ======= -->
+         <section id="contact" class="contact">
+            <div class="container" data-aos="fade-up">
+               <div class="section-title text-center">
+                  <h2>Liên hệ</h2>
+                  <p>Magnam dolores commodi suscipit. Necessitatibus eius consequatur ex aliquid fuga eum quidem. Sit sint consectetur velit. Quisquam quos quisquam cupiditate. Et nemo qui impedit suscipit alias ea. Quia fugiat sit in iste officiis commodi quidem hic quas.</p>
+               </div>
+               <div class="row" >
+                  <div class="col-lg-5 d-flex align-items-stretch">
+                     <div class="info">
+                        <div class="address">
+                           <i class="icofont-google-map"></i>
+                           <h4>Địa chỉ Đà Nẵng</h4>
+                           <p>Hải Châu, Đà Nẵng</p>
+                        </div>
+                        <div class="email">
+                           <i class="icofont-envelope"></i>
+                           <h4>Địa chỉ Email</h4>
+                           <p>abc@gmail.com</p>
+                        </div>
+                        <div class="phone">
+                           <i class="icofont-phone"></i>
+                           <h4>Fanpage</h4>
+                           <a href="">
+                              <p>https://www.facebook.com//</p>
+                           </a>
+                        </div>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
+                     </div>
+                  </div>
+                  <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
+                     <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+                        <div class="form-row">
+                           <div class="form-group col-md-6">
+                              <label for="name">Your Name</label>
+                              <input type="text" name="name" class="form-control" id="name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
+                              <div class="validate"></div>
+                           </div>
+                           <div class="form-group col-md-6">
+                              <label for="name">Your Email</label>
+                              <input type="email" class="form-control" name="email" id="email" data-rule="email" data-msg="Please enter a valid email" />
+                              <div class="validate"></div>
+                           </div>
+                        </div>
+                        <div class="form-group">
+                           <label for="name">Subject</label>
+                           <input type="text" class="form-control" name="subject" id="subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
+                           <div class="validate"></div>
+                        </div>
+                        <div class="form-group">
+                           <label for="name">Message</label>
+                           <textarea class="form-control" name="message" rows="10" data-rule="required" data-msg="Please write something for us"></textarea>
+                           <div class="validate"></div>
+                        </div>
+                        <div class="mb-3">
+                           <div class="loading">Loading</div>
+                           <div class="error-message"></div>
+                           <div class="sent-message">Your message has been sent. Thank you!</div>
+                        </div>
+                        <div class="text-center"><button type="submit">Send Message</button></div>
+                     </form>
+                  </div>
+               </div>
+            </div>
+         </section>
+         <!-- End Contact Section -->
+      </main>
+      <footer class="footer mt-auto py-3 bg-info text-white">
+         <div class="container">
+            <span class="text-white">Footer here.</span>
+         </div>
+      </footer>
+      </body>
 </html>
