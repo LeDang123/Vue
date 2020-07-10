@@ -6,7 +6,6 @@ import vuetify from "./plugins/vuetify";
 import "./assets/css/style.css";
 import "./assets/css/bootstrap.css";
 
-
 Vue.config.productionTip = false;
 
 new Vue({
