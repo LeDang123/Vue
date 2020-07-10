@@ -6,24 +6,28 @@
         <h3 v-show="ninja.show">{{ ninja.speciality }}</h3>
       </li>
     </ul>
+    <button v-on:click="deleteNinja">Delete ninja</button>
   </div>
 </template>
 
 <script>
 export default {
-  name: "App",
 
-  data: () => ({
-    ninjas: [
-      {name: 'Ryu', speciality: 'Vue Components', show:false},
-      {name: 'Crystal', speciality: 'HTML Wizardry', show:false},
-      {name: 'Hitoshi', speciality: 'Click Events', show:false},
-      {name: 'Tango', speciality: 'Conditionals', show:false},
-      {name: 'Kami', speciality: 'Webpack', show:false},
-      {name: 'Yoshi', speciality: 'Data Diggin', show:false}
-      ]
-  })
-};
+props: {
+    ninjas: {
+      type: Array,
+      required: true
+    }
+},
+
+
+
+methods: {
+  deleteNinja: function(){
+    this.ninjas.pop();
+  }
+}
+}
 </script>
 <style scoped>
 #ninjas{
