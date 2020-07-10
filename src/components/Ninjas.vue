@@ -20,8 +20,6 @@ props: {
     }
 },
 
-
-
 methods: {
   deleteNinja: function(){
     this.ninjas.pop();
