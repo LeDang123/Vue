@@ -1,14 +1,28 @@
 <template>
   <header>
-    <h1>{{ title }}</h1>
+    <h1 v-on:click="changeTitle">{{ title }}</h1>
   </header>
 </template>
 
 <script>
 export default {
+
+props: {
+  title: {
+    type: String
+  }
+},
+
 data: () => ({
-    title: "Vue Ninja"
-  })
+    title: "Hello"
+  }),
+
+methods:{
+  changeTitle: function(){
+    this.$emit=('changeTitle' , 'Widzard Vue');
+  }
+},
+
 };
 </script>
 
