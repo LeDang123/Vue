@@ -3,11 +3,10 @@
     <app-header v-bind:title="title" v-on:click="changeTitle"></app-header>
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
     <app-formHelper>
-      <h2 slot="title">I am the slot title</h2>
-      <p slot="text">I am the paragraph text for the slot</p><br/>
+      
       <div slot="form-header">
         <h3>This is the title of the form</h3>
-        <p>Information about the form</p><br/>
+        <p>Information about the form</p>
       </div>
       <div slot="form-fields">
         <input type="text" placeholder="name" required/>
