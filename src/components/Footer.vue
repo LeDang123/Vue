@@ -1,15 +1,31 @@
 <template>
   <footer>
-    <p>{{ copyright }}</p>
+    <p>{{ copyright }} {{ title }}</p>
   </footer>
 </template>
 
 <script>
+import {bus} from "../main.js";
+
 export default {
+
+props: {
+  title: {
+    type: String
+  }
+},
+
 data: () => ({
-    copyright: "Copyright 2007 Vue Ninja"
-  })
-};
+    copyright: "Copyright 2007"
+  }),
+
+created(){
+bus.$on("changeTitle" , (data)=>{
+  this.title = data;
+});
+}
+}
+
 </script>
 
 <style scoped>
