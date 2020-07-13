@@ -5,6 +5,7 @@
 </template>
 
 <script>
+import {bus} from "../main.js";
 export default {
 
 props: {
@@ -19,7 +20,9 @@ data: () => ({
 
 methods:{
   changeTitle: function(){
-    this.$emit=('changeTitle' , 'Widzard Vue');
+    //this.$emit=('changeTitle' , 'Widzard Vue');
+    this.title = 'Widzard Vue';
+    bus.$emit('changeTitle' , 'Widzard Vue');
   }
 },
 
