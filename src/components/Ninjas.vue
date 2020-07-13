@@ -22,7 +22,7 @@ props: {
 
 methods: {
   deleteNinja: function(){
-    this.ninjas.pop();
+  this.ninjas.pop();
   }
 },
 
