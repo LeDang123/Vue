@@ -4,7 +4,7 @@
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
     <hr/>
     <app-ninjas v-bind:ninjas="ninjas"></app-ninjas>
-    <app-footer v-bind:title="title"></app-footer>
+    <app-footer v-bind:title="title" v-on:click="changeTitle"></app-footer>
   </div>
 
 </template>
@@ -30,6 +30,7 @@ export default {
       {name: 'Kami', speciality: 'Webpack', show:false},
       {name: 'Yoshi', speciality: 'Data Diggin', show:false}
       ], 
+
       title: "Vue Ninjas",
   }),
 
