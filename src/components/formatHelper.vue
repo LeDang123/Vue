@@ -1,7 +1,7 @@
 <template>
   <header>
     <slot name="title"></slot>
-    <slot name="text"></slot><hr/>
+    <slot name="text"></slot>
     <h1>Please fill out our form</h1>
     <form>
         <div id="form-header">
