@@ -16,6 +16,7 @@
         <button v-on:click="handleSubmit">Submit</button>
       </div>
     </app-formHelper>
+    <app-blog></app-blog>
     <app-footer v-bind:title="title" v-on:click="changeTitle"></app-footer>
 
   </div>
@@ -26,13 +27,15 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Ninjas from "./components/Ninjas.vue";
 import formHelper from "./components/formatHelper.vue";
+import addBlog from "./components/addBlog.vue";
 
 export default {
   components: {
   "app-header": Header,
   "app-footer": Footer,
   "app-ninjas": Ninjas,
-  "app-formHelper": formHelper
+  "app-formHelper": formHelper,
+  "app-blog": addBlog
   },
 
   data: () => ({
