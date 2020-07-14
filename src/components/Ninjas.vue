@@ -25,9 +25,9 @@ methods: {
   this.ninjas.pop();
   }
 },
-
+}
 //Lifecycle hooks
-beforeCeate(){
+/*beforeCeate(){
   alert('Before create');
 },
 
@@ -49,8 +49,8 @@ beforeUpdate(){
 
 updated(){
   alert('updated');
-}
-}
+}*/
+
 </script>
 <style scoped>
 #ninjas{

@@ -1,0 +1,47 @@
+<template>
+ <div id="add-blog">
+     <h2>Add a new Blog Post</h2>
+     <form>
+         <label> Blog Title </label>
+         <input type="text" required />
+         <label> Blog Content </label>
+         <textarea></textarea>
+     </form>
+     <div id="preview">
+         <h3>Preview Blog</h3>
+         <p>Blog title:</p>
+         <p>Blog content:</p>
+     </div>
+ </div>
+</template>
+
+<script>
+
+</script>
+
+<style>
+#add-blog *{
+    box-sizing: border-box;
+}
+#add-blog{
+    margin: 20px auto;
+    max-width: 500px;
+}
+label{
+    display: block;
+    margin: 20px 0 10px;
+}
+input[type="text"], textarea{
+    display: block;
+    width: 100%;
+    padding:8px;
+    background: lightgreen;
+}
+#preview{
+    padding: 10px 20px;
+    border: 1px dotted #ccc;
+}
+h3{
+    margin-top: 10px;
+}
+</style>
