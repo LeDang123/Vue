@@ -16,6 +16,16 @@ Vue.directive("rainbow",{
     el.style.color = "#" + Math.random().toString().slice(2,8);
   }
 });
+
+//Filters
+Vue.filter('to-uppercase',function(value){
+  return value.toUpperCase();
+});
+
+Vue.filter('snippet',function(value){
+  return value.slice(0,100) + '...';
+});
+
 Vue.directive("Theme",{
   bind(el,binding){
     if(binding.value == "wide"){
@@ -28,7 +38,10 @@ Vue.directive("Theme",{
       el.style.padding = '20px';
     }
   }
-});
+}),
+
+
+
 //export const bus = new Vue();
 
 new Vue({
