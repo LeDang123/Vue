@@ -1,6 +1,6 @@
 <template>
    <div id="add-blog">
-      <h2>Add a new Blog Post</h2>
+      <h1>Add a new Blog Post - HTTP REQUEST</h1>
       <form v-if="!submitted">
          <label> Blog Title </label>
          <input type="text" v-model.lazy="blog.title" required />
@@ -40,6 +40,7 @@
          </ul>
          <span>Author: {{ blog.author }}</span>
       </div>
+      
    </div>
 </template>
 <script>
