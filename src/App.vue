@@ -18,6 +18,8 @@
       </div>
     </app-formHelper>-->
     <app-blog></app-blog>
+    <hr/>
+    <show-blogs></show-blogs>
     <app-footer v-bind:title="title" v-on:click="changeTitle"></app-footer>
 
   </div>
@@ -29,6 +31,7 @@ import Footer from "./components/Footer.vue";
 import Ninjas from "./components/Ninjas.vue";
 //import formHelper from "./components/formatHelper.vue";
 import addBlog from "./components/addBlog.vue";
+import showBlogs from "./components/showBlogs.vue"
 
 export default {
   components: {
@@ -36,7 +39,8 @@ export default {
   "app-footer": Footer,
   "app-ninjas": Ninjas,
   //"app-formHelper": formHelper,
-  "app-blog": addBlog
+  "app-blog": addBlog,
+  "show-blogs": showBlogs,
   },
 
   data: () => ({
