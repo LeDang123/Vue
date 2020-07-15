@@ -5,7 +5,7 @@
          <label> Blog Title </label>
          <input type="text" v-model.lazy="blog.title" required />
          <label> Blog Content </label>
-         <textarea type="textarea" v-model.lazy="blog.content"></textarea><br/>
+         <textarea type="textarea" v-model.lazy="blog.content" required></textarea><br/>
          <label>Blog categories:</label>
          <div id="checkboxes">
             <label>Ninjas</label>
@@ -24,7 +24,7 @@
                {{ option.value }}
             </option>
          </select>
-         <button v-on:click.prevent="post">Add Blog</button>
+         <button v-on:click="post">Add Blog</button>
       </form>
       <div v-if="submitted">
          <h3>Thanks for adding your post</h3>
@@ -65,9 +65,9 @@
               title: this.blog.title,
               body: this.blog.content,
               userId: 1,
-              submitted: this.submitted = true,
            }).then(function(data){
               console.log(data);
+              this.submitted = true;
            })
         }
      }
