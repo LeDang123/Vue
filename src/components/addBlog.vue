@@ -1,7 +1,7 @@
 <template>
    <div id="add-blog">
       <h2>Add a new Blog Post</h2>
-      <form>
+      <form v-if="!submitted">
          <label> Blog Title </label>
          <input type="text" v-model.lazy="blog.title" required />
          <label> Blog Content </label>
@@ -24,7 +24,11 @@
                {{ option.value }}
             </option>
          </select>
+         <button v-on:click.prevent="post">Add Blog</button>
       </form>
+      <div v-if="submitted">
+         <h3>Thanks for adding your post</h3>
+      </div>
       <br/>
       <div id="preview">
          <h3>Preview Blog</h3>
@@ -53,7 +57,20 @@
          { text: 'Two', value: 'The Angualar Avenger' },
          { text: 'Three', value: 'The Vue Candicator' }
          ],
-     })
+     }),
+      submitted: false,
+     methods: {
+        post: function(){
+           this.$http.post('https://jsonplaceholder.typicode.com/posts' , {
+              title: this.blog.title,
+              body: this.blog.content,
+              userId: 1,
+              submitted: this.submitted = true,
+           }).then(function(data){
+              console.log(data);
+           })
+        }
+     }
    }
 </script>
 <style>
