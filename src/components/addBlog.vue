@@ -49,10 +49,10 @@
            author: "",
        },
        options: [
-               { text: 'One', value: 'The Net Ninja' },
-               { text: 'Two', value: 'The Angualar Avenger' },
-               { text: 'Three', value: 'The Vue Candicator' }
-               ],
+         { text: 'One', value: 'The Net Ninja' },
+         { text: 'Two', value: 'The Angualar Avenger' },
+         { text: 'Three', value: 'The Vue Candicator' }
+         ],
      })
    }
 </script>
