@@ -17,11 +17,13 @@
         <button v-on:click="handleSubmit">Submit</button>
       </div>
     </app-formHelper>-->
-    <app-blog></app-blog>
+    <!--<app-blog></app-blog>
     <hr/>
+    <show-blogs></show-blogs>
+    <hr/>-->
     <router-view></router-view>
     <br/>
-    <list-blogs></list-blogs>
+    <!--<list-blogs></list-blogs>-->
     <app-footer v-bind:title="title" v-on:click="changeTitle"></app-footer>
 
   </div>
@@ -32,9 +34,9 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Ninjas from "./components/Ninjas.vue";
 //import formHelper from "./components/formatHelper.vue";
-import addBlog from "./components/addBlog.vue";
+//import addBlog from "./components/addBlog.vue";
 //import showBlogs from "./components/showBlogs.vue";
-import listBlogs from "./components/listBlogs.vue"
+//import listBlogs from "./components/listBlogs.vue"
 
 export default {
   components: {
@@ -42,9 +44,9 @@ export default {
   "app-footer": Footer,
   "app-ninjas": Ninjas,
   //"app-formHelper": formHelper,
-  "app-blog": addBlog,
+  //"app-blog": addBlog,
   //"show-blogs": showBlogs,
-  "list-blogs": listBlogs,
+  //"list-blogs": listBlogs,
   },
 
   data: () => ({
