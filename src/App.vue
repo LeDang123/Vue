@@ -19,7 +19,8 @@
     </app-formHelper>-->
     <app-blog></app-blog>
     <hr/>
-    <show-blogs></show-blogs><br/>
+    <router-view></router-view>
+    <br/>
     <list-blogs></list-blogs>
     <app-footer v-bind:title="title" v-on:click="changeTitle"></app-footer>
 
@@ -32,7 +33,7 @@ import Footer from "./components/Footer.vue";
 import Ninjas from "./components/Ninjas.vue";
 //import formHelper from "./components/formatHelper.vue";
 import addBlog from "./components/addBlog.vue";
-import showBlogs from "./components/showBlogs.vue";
+//import showBlogs from "./components/showBlogs.vue";
 import listBlogs from "./components/listBlogs.vue"
 
 export default {
@@ -42,7 +43,7 @@ export default {
   "app-ninjas": Ninjas,
   //"app-formHelper": formHelper,
   "app-blog": addBlog,
-  "show-blogs": showBlogs,
+  //"show-blogs": showBlogs,
   "list-blogs": listBlogs,
   },
 
