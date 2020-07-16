@@ -31,10 +31,27 @@ export default {
   },
 
     computed: {
-        
-    },
 
-    mixins: [searchMinxins]
+        filterBlogs: function(){
+            return this.blogs.filter((blog) => {
+                return blog.title.match(this.search);
+            });
+        }
+    },
+    filters: {
+        toUppercase(value){
+            return value.toUpperCase();
+        }
+    },
+    directives: {
+        'rainbow':{
+           bind(el){
+            el.style.color = "#" + Math.random().toString().slice(2,8);
+  }
+        }
+
+    }
+
 }
 </script>
 
