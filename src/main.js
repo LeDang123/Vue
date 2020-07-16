@@ -1,7 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
 import VueResource from "vue-resource";
-//import router from "./router";
+import Vuerouter from "vue-router";
+import Router from "./router"
 //import store from "./store";
 //import vuetify from "./plugins/vuetify";
 //import "./assets/css/style.css";
@@ -9,9 +10,13 @@ import VueResource from "vue-resource";
 //Vue.config.productionTip = false;
 
 Vue.use(VueResource);
+Vue.use(Vuerouter);
+
+const router = new Vuerouter({
+  routers: Router
+});
 
 //Custom Directives
-
 Vue.directive("Theme",{
   bind(el,binding){
     if(binding.value == "wide"){
@@ -41,5 +46,6 @@ new Vue({
   //router,
   //store,
   //vuetify,
-  render: h => h(App)
+  render: h => h(App),
+  router: router
 }).$mount("#app");
