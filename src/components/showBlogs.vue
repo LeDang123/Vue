@@ -1,5 +1,9 @@
 <template>
    <div v-theme:column="'wide'" id="show-blogs">
+      <ul>
+         <li><router-link to="/">Blog</router-link></li>
+         <li><router-link to="/add">Add a blog</router-link></li>
+      </ul>
       <h1> All Blog Articles - GET REQUEST </h1>
       <input type="text" v-model="search" placeholder="search blogs" />
       <div v-for="blog in filterBlogs" v-bind:key="blog" class="single-blog">

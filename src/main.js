@@ -1,8 +1,8 @@
 import Vue from "vue";
 import App from "./App.vue";
 import VueResource from "vue-resource";
-import Vuerouter from "vue-router";
-import Router from "./router"
+import VueRouter from "vue-router";
+import Routes from "./routes"
 //import store from "./store";
 //import vuetify from "./plugins/vuetify";
 //import "./assets/css/style.css";
@@ -10,10 +10,10 @@ import Router from "./router"
 //Vue.config.productionTip = false;
 
 Vue.use(VueResource);
-Vue.use(Vuerouter);
+Vue.use(VueRouter);
 
-const router = new Vuerouter({
-  routers: Router
+const router = new VueRouter({
+  routes: Routes
 });
 
 //Custom Directives
