@@ -1,10 +1,9 @@
 <template>
   <div v-theme:column="'wide'" id="show-blogs">
-    <h1> All Blog Articles - GET REQUEST </h1>
+    <h1> List Blogs Title </h1>
     <input type="text" v-model="search" placeholder="search blogs" />
     <div v-for="blog in filterBlogs" v-bind:key="blog" class="single-blog">
         <h2 v-rainbow> {{ blog.title | to-uppercase }}</h2>
-        <article>{{ blog.body | snippet }}</article>
     </div>
 <br/>
   </div>
@@ -30,28 +29,11 @@ export default {
       })
   },
 
-    computed: {
+  computed: {
+      
+  },
 
-        filterBlogs: function(){
-            return this.blogs.filter((blog) => {
-                return blog.title.match(this.search);
-            });
-        }
-    },
-    filters: {
-        toUppercase(value){
-            return value.toUpperCase();
-        }
-    },
-    directives: {
-        'rainbow':{
-           bind(el){
-            el.style.color = "#" + Math.random().toString().slice(2,8);
-  }
-        }
-
-    }
-
+  mixins: [searchMinxins]
 }
 </script>
 
