@@ -11,20 +11,6 @@ import VueResource from "vue-resource";
 Vue.use(VueResource);
 
 //Custom Directives
-Vue.directive("rainbow",{
-  bind(el){
-    el.style.color = "#" + Math.random().toString().slice(2,8);
-  }
-});
-
-//Filters
-Vue.filter('to-uppercase',function(value){
-  return value.toUpperCase();
-});
-
-Vue.filter('snippet',function(value){
-  return value.slice(0,100) + '...';
-});
 
 Vue.directive("Theme",{
   bind(el,binding){
@@ -40,10 +26,17 @@ Vue.directive("Theme",{
   }
 }),
 
+//Filters
+/*Vue.filter('to-uppercase',function(value){
+  return value.toUpperCase();
+});*/
+
+Vue.filter('snippet',function(value){
+  return value.slice(0,100) + '...';
+});
 
 
 //export const bus = new Vue();
-
 new Vue({
   //router,
   //store,
