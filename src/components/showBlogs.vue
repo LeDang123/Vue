@@ -47,6 +47,16 @@ export default {
             el.style.color = "#" + Math.random().toString().slice(2,8);
   }
         }
+
+
+
+
+
+
+
+
+
+
     }
 }
 </script>
