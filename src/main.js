@@ -41,7 +41,6 @@ Vue.filter('snippet',function(value){
   return value.slice(0,100) + '...';
 });
 
-
 //export const bus = new Vue();
 new Vue({
   //router,
