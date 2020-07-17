@@ -3,7 +3,7 @@
       <h1> All Blog Articles - GET REQUEST </h1>
       <input type="text" v-model="search" placeholder="search blogs" />
       <div v-for="blog in filterBlogs" v-bind:key="blog" class="single-blog">
-         <router-link v-bind:to="'/blog' + blog.id "><h2 v-rainbow> {{ blog.title | to-uppercase }}</h2></router-link>
+         <router-link v-bind:to="'/blog/' + blog.id "><h2 v-rainbow> {{ blog.title | to-uppercase }}</h2></router-link>
          <article>{{ blog.body | snippet }}</article>
       </div>
       <br/>
