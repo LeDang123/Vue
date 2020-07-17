@@ -21,6 +21,7 @@
     <hr/>
     <show-blogs></show-blogs>
     <hr/>-->
+    
     <router-view></router-view>
     <br/>
     <!--<list-blogs></list-blogs>-->
